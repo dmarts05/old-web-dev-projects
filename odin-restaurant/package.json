@@ -1,0 +1,26 @@
+{
+  "name": "odin-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --progress --watch",
+    "build": "webpack --progress --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmarts05/odin-restaurant.git"
+  },
+  "keywords": [],
+  "author": "kingmineplay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmarts05/odin-restaurant/issues"
+  },
+  "homepage": "https://github.com/dmarts05/odin-restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

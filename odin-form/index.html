@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Form</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <!-- Import Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Import JavaScript -->
+    <script src="js/app.js" defer></script>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="aside-wrapper">
+      <div class="logo-wrapper">
+        <img src="img/logo.png" alt="Logo" />
+        <h2>KMP</h2>
+      </div>
+      <p>
+        Photo by
+        <a href="https://unsplash.com/@pipeaguileram" target="_blank"
+          >Pipe A.</a
+        >
+        on
+        <a href="https://unsplash.com/" target="_blank">Unsplash.</a>
+      </p>
+    </aside>
+    <main class="main-wrapper">
+      <p>
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams. Sign up now to get
+        started.
+      </p>
+      <p>You know you want to.</p>
+      <form action="">
+        <div>
+          <h2>Let's do this!</h2>
+          <ul>
+            <li>
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </li>
+            <li>
+              <label for="last-name">LAST NAME</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </li>
+            <li>
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" required />
+            </li>
+            <li>
+              <label for="phone">PHONE NUMBER</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{9}"
+                required
+                oninvalid="this.setCustomValidity('Please enter a valid phone number')"
+                oninput="setCustomValidity('')"
+              />
+            </li>
+            <li>
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                onChange="checkSamePassword()"
+              />
+            </li>
+            <li>
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                onChange="checkSamePassword()"
+              />
+            </li>
+          </ul>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <span
+        >Already have an account?
+        <a href="#" class="log-in-link">Log in</a></span
+      >
+    </main>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Tic Tac Toe</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- Import StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/34e8016438.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" draggable="false">
+        <img src="img/logo.png" alt="Logo" draggable="false"/>
+        <h2>TIC TAC TOE</h2>
+      </a>
+    </header>
+
+    <main>
+      <section class="start-section">
+        <div class="title">
+          <img src="img/logo.png" alt="Logo" draggable="false"/>
+          <h1>TIC TAC TOE</h1>
+        </div>
+          <button id="start-game">START</button>
+      </section>
+
+      <div class="modal-wrapper" id="game-options">
+        <form class="game-options-modal">
+          <h2>GAME OPTIONS</h2>
+          <p>
+            <input type="text" name="player-1-name" id="player-1-name" placeholder="Name" maxlength="12">
+            <label for="player-1-name">Player 1</label>
+          </p>
+          <p>
+            <input type="text" name="player-2-name" id="player-2-name" placeholder="Name"  value="AI" maxlength="12" disabled>
+            <label for="player-2-name">Player 2</label>
+          </p>
+          <fieldset id="gamemode">
+            <legend>Game Mode</legend>
+            <p>
+              <input type="radio" name="gamemode" id="ai" value="ai" checked>
+              <label for="ai">AI</label>
+            </p>
+            <p>
+              <input type="radio" name="gamemode" id="pvp" value="pvp">
+              <label for="pvp">PVP</label>
+            </p>
+          </fieldset>
+          <fieldset id="difficulty">
+            <legend>Difficulty</legend>
+            <p>
+              <input type="radio" name="difficulty" id="easy" value="easy" checked>
+              <label for="easy">Easy</label>
+            </p>
+            <p>
+              <input type="radio" name="difficulty" id="normal" value="normal">
+              <label for="normal">Normal</label>
+            </p>
+            <p >
+              <input type="radio" name="difficulty" id="hard" value="hard" disabled>
+              <label for="hard">Hard</label>
+            </p>
+          </fieldset>
+
+          <button type="button" id="go-btn">GO!</button>
+        </form>
+      </div>
+
+      <section class="game-section">
+        <div class="player-wrapper">
+          <h2 id="player-1-name-gameboard"></h2>
+          <p class="piece">O</p>
+        </div>
+        <div class="gameboard-wrapper">
+          <h2 id="player-turn"></h2>
+          <div class="gameboard">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
+        </div> 
+        <div class="player-wrapper">
+          <h2 id="player-2-name-gameboard"></h2>
+          <p class="piece">X</p>
+        </div>
+      </section>
+
+      <div class="modal-wrapper" id="end-game">
+        <div class="end-game-modal">
+          <h2></h2>
+          <div>
+            <a href="index.html" draggable="false"><button id="home-btn">HOME</button></a>
+            <button id="reset-btn">RESET</button>
+          </div>    
+        </div>
+      </div>
+      
+      <div class="theme-btn-wrapper">
+        <i class="fa-solid fa-sun theme-btn"></i>
+      </div>
+    </body>
+    </main>
+</html>

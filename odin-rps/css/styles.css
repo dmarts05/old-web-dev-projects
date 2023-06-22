@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+ /* Animated Gradient Background */
+body {
+  background: linear-gradient(-45deg, #6f52ee, #3c78e7, #23a6d5, #23cfd5);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+i {
+  transition: all 0.5s;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+}
+
+/* Header text */
+h1 {
+  font-size: 6em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+/* Round and Game text */
+h2 {
+  font-size: 3em;
+}
+
+/* Scores */
+.player-score, .ai-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.player-score h3, .ai-score h3{
+  font-size: 2em;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+}
+
+.options img {
+  max-width: 8em;
+}
+
+.option {
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.option:hover {
+  transform: scale(110%);
+}
+
+/* Round Result */
+.round-result i {
+  font-size: 6em;
+}
+
+/* Game Result */
+.game-result h2, .game-result i {
+  display: none;
+  background: linear-gradient(-45deg, white, #48fd00);
+  -webkit-background-clip: text;
+  background-size: 400% 400%;
+  animation: gradient 2.5s ease infinite;
+  color: transparent;
+}
+
+/* Reload button */
+.btn-reload {
+  display: none;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  font-weight: 700;
+  transition: all 0.25s;
+}
+
+.btn-reload:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  background-color: white;
+  color: #3c78e7;
+}
